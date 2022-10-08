@@ -28,14 +28,23 @@ else if (guess === randomNumber) {
   }
  // If the guess is higher than the secret number
  else if (guess > randomNumber) {
-    document.querySelector('.message').textContent = 'Too High!';
+    document.querySelector('.message').textContent = 'Too High! Think Smaller!';
     guessesLeft--;
   }
 
   // If the guess is lower than the secret number
   else if (guess < randomNumber) {
-    document.querySelector('.message').textContent = 'Too Low!';
+    document.querySelector('.message').textContent = 'Too Low! Think Bigger!';
     guessesLeft--;
   }
 
+});
+
+//Reset the page
+document.querySelector('.reset').addEventListener('click', function () {
+  guessesLeft = 5;
+  randomNumber = Math.floor(Math.random() * 100 + 1);
+  document.querySelector('.message').textContent = 'Current Status: Thinking of a Number Between 1 and 100... 🤔';
+  document.querySelector('.guess').value = '';
+  document.querySelector('body').style.backgroundColor = '#2e294e';
 });
