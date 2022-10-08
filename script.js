@@ -17,7 +17,7 @@ if (!guess) {
     document.querySelector('.message').textContent = 'Please insert a number';
   } else if (guessesLeft < 1) {
     document.querySelector('.message').textContent = 'You lost 😭 Better luck next time!';
-    document.querySelector('body').style.backgroundColor = '#d7263d';
+    document.querySelector('body').style.backgroundColor = '#c44536';
   }
 
 // If the guess is correct
@@ -30,14 +30,14 @@ else if (guess === randomNumber) {
  else if (guess > randomNumber) {
     document.querySelector('.message').textContent = 'Too High! Think Smaller! ⬇️';
     guessesLeft--;
-    document.querySelector('body').style.backgroundColor = '#d7263d';
+    document.querySelector('body').style.backgroundColor = '#c44536';
   }
 
   // If the guess is lower than the secret number
   else if (guess < randomNumber) {
     document.querySelector('.message').textContent = 'Too Low! Think Bigger! ⬆️';
     guessesLeft--;
-    document.querySelector('body').style.backgroundColor = '#d7263d';
+    document.querySelector('body').style.backgroundColor = '#c44536';
   }
 
 });
