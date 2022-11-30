@@ -1,4 +1,4 @@
-Guess the Number!
+#Guess the Number!
 
 Instructions:
 1. Generate a random number between 1 and 100
